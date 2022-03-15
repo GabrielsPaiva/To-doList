@@ -66,6 +66,11 @@ font-size: 35px;
 width: 80%;
 height: 90%;
 margin-left: 1.5%;
+
+${customMedia.lessThan('mobileS')`
+border-radius: 15px;
+width: 100%;
+`}
 `
 const PlusButton = styled.button`
 background-color: #cacbcc;
@@ -80,6 +85,11 @@ outline: none;
 
 ${media.lessThan('medium')`
 height: 10vw;
+`}
+
+${customMedia.lessThan('mobileS')`
+width: 40%;
+margin-top: 2%;
 `}
 `
 const List = styled.ul`
@@ -125,10 +135,14 @@ border: none;
 width: 12em;
 height: 5%;
 margin-left: 2em;
-margin-top: 3%;
+margin-top: 1.5em;
 &:hover{
   cursor: pointer;
 }
+
+${customMedia.lessThan('mobileS')`
+margin-left: 0.5em;
+`}
 `
 
 export default class todoList extends React.Component {
