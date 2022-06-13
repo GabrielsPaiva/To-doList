@@ -27,8 +27,12 @@ export default function Main() {
         }
     }
     const remove = (id) => {
-        const filteredList = taskList.filter((item) => {
-            if (id !== item.id) { return true }
+        const filteredList = taskList.filter(item => {
+            if (id !== item.id) { 
+                return true 
+            } else {
+                return false;
+            }
         })
         setTaskList(filteredList)
     }
